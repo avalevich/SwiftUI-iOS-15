@@ -17,6 +17,9 @@ struct AccountView: View {
                 menu
                 links
             }
+            .safeAreaInset(edge: .bottom) {
+                Color.clear.frame(height: 32)
+            }
             .listStyle(.insetGrouped)
             .navigationTitle("Account")
         }
@@ -54,6 +57,36 @@ struct AccountView: View {
     
     var menu: some View {
         Section {
+            NavigationLink {
+                HomeView()
+            } label: {
+                Label("Settings", systemImage: "gear")
+            }
+            NavigationLink {
+                HomeView()
+            } label: {
+                Label("Billing", systemImage: "creditcard")
+            }
+            NavigationLink {
+                HomeView()
+            } label: {
+                Label("Help", systemImage: "questionmark")
+            }
+            NavigationLink {
+                HomeView()
+            } label: {
+                Label("Settings", systemImage: "gear")
+            }
+            NavigationLink {
+                HomeView()
+            } label: {
+                Label("Billing", systemImage: "creditcard")
+            }
+            NavigationLink {
+                HomeView()
+            } label: {
+                Label("Help", systemImage: "questionmark")
+            }
             NavigationLink {
                 HomeView()
             } label: {

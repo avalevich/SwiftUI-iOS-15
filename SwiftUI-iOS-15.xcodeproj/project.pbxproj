@@ -12,6 +12,14 @@
 		3A3B35182C6BDB7700CCE04C /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B35172C6BDB7700CCE04C /* TabBar.swift */; };
 		3A3B351A2C6BDF1400CCE04C /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B35192C6BDF1400CCE04C /* Tab.swift */; };
 		3A3B351C2C6BEBEE00CCE04C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B351B2C6BEBEE00CCE04C /* HomeView.swift */; };
+		3A3B35252C6E2A2000CCE04C /* FeaturedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B35242C6E2A2000CCE04C /* FeaturedItem.swift */; };
+		3A3B35272C6E2B3600CCE04C /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B35262C6E2B3600CCE04C /* NavigationBar.swift */; };
+		3A3B35292C6E301100CCE04C /* PreferenceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B35282C6E301100CCE04C /* PreferenceKeys.swift */; };
+		3A3B352D2C6E3B4200CCE04C /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B352C2C6E3B4200CCE04C /* Course.swift */; };
+		3A3B352F2C6E595500CCE04C /* MatchedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B352E2C6E595500CCE04C /* MatchedView.swift */; };
+		3A3B35312C6E734800CCE04C /* CourseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B35302C6E734800CCE04C /* CourseItem.swift */; };
+		3A3B35332C6E73EE00CCE04C /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B35322C6E73EE00CCE04C /* CourseView.swift */; };
+		3A3B35352C6E795F00CCE04C /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B35342C6E795F00CCE04C /* Animations.swift */; };
 		3A4958142C6B953400889286 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4958132C6B953400889286 /* AccountView.swift */; };
 		3A684A732C4EE4170058A51D /* SwiftUI_iOS_15App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A684A722C4EE4170058A51D /* SwiftUI_iOS_15App.swift */; };
 		3A684A752C4EE4170058A51D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A684A742C4EE4170058A51D /* ContentView.swift */; };
@@ -26,6 +34,14 @@
 		3A3B35172C6BDB7700CCE04C /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		3A3B35192C6BDF1400CCE04C /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		3A3B351B2C6BEBEE00CCE04C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3A3B35242C6E2A2000CCE04C /* FeaturedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItem.swift; sourceTree = "<group>"; };
+		3A3B35262C6E2B3600CCE04C /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		3A3B35282C6E301100CCE04C /* PreferenceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKeys.swift; sourceTree = "<group>"; };
+		3A3B352C2C6E3B4200CCE04C /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		3A3B352E2C6E595500CCE04C /* MatchedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedView.swift; sourceTree = "<group>"; };
+		3A3B35302C6E734800CCE04C /* CourseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItem.swift; sourceTree = "<group>"; };
+		3A3B35322C6E73EE00CCE04C /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
+		3A3B35342C6E795F00CCE04C /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		3A4958132C6B953400889286 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		3A684A6F2C4EE4170058A51D /* SwiftUI-iOS-15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-iOS-15.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A684A722C4EE4170058A51D /* SwiftUI_iOS_15App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_iOS_15App.swift; sourceTree = "<group>"; };
@@ -51,6 +67,7 @@
 			children = (
 				3A3B35172C6BDB7700CCE04C /* TabBar.swift */,
 				3A684A742C4EE4170058A51D /* ContentView.swift */,
+				3A3B35262C6E2B3600CCE04C /* NavigationBar.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -59,7 +76,9 @@
 			isa = PBXGroup;
 			children = (
 				3A4958132C6B953400889286 /* AccountView.swift */,
+				3A3B35322C6E73EE00CCE04C /* CourseView.swift */,
 				3A3B351B2C6BEBEE00CCE04C /* HomeView.swift */,
+				3A3B352E2C6E595500CCE04C /* MatchedView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -69,6 +88,8 @@
 			children = (
 				3A3B35132C6BC34300CCE04C /* HexagonView.swift */,
 				3A3B35152C6BD13B00CCE04C /* BlobView.swift */,
+				3A3B35242C6E2A2000CCE04C /* FeaturedItem.swift */,
+				3A3B35302C6E734800CCE04C /* CourseItem.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -77,6 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				3A3B35192C6BDF1400CCE04C /* Tab.swift */,
+				3A3B35282C6E301100CCE04C /* PreferenceKeys.swift */,
+				3A3B352C2C6E3B4200CCE04C /* Course.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -85,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				3A684A802C5038CA0058A51D /* Styles.swift */,
+				3A3B35342C6E795F00CCE04C /* Animations.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -199,13 +223,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A3B351C2C6BEBEE00CCE04C /* HomeView.swift in Sources */,
+				3A3B35312C6E734800CCE04C /* CourseItem.swift in Sources */,
+				3A3B35352C6E795F00CCE04C /* Animations.swift in Sources */,
 				3A4958142C6B953400889286 /* AccountView.swift in Sources */,
 				3A3B35142C6BC34300CCE04C /* HexagonView.swift in Sources */,
 				3A684A812C5038CA0058A51D /* Styles.swift in Sources */,
 				3A3B351A2C6BDF1400CCE04C /* Tab.swift in Sources */,
+				3A3B35272C6E2B3600CCE04C /* NavigationBar.swift in Sources */,
+				3A3B35332C6E73EE00CCE04C /* CourseView.swift in Sources */,
 				3A3B35162C6BD13B00CCE04C /* BlobView.swift in Sources */,
 				3A684A752C4EE4170058A51D /* ContentView.swift in Sources */,
+				3A3B352D2C6E3B4200CCE04C /* Course.swift in Sources */,
 				3A684A732C4EE4170058A51D /* SwiftUI_iOS_15App.swift in Sources */,
+				3A3B352F2C6E595500CCE04C /* MatchedView.swift in Sources */,
+				3A3B35252C6E2A2000CCE04C /* FeaturedItem.swift in Sources */,
+				3A3B35292C6E301100CCE04C /* PreferenceKeys.swift in Sources */,
 				3A3B35182C6BDB7700CCE04C /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
