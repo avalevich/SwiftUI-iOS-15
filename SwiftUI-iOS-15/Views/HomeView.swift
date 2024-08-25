@@ -12,6 +12,9 @@ struct HomeView: View {
     @State var show = false
     @State var hasScrolled = false
     @State var showStatusBar = true
+    @State var selectedId = UUID()
+    
+    @EnvironmentObject var model: Model
     
     var body: some View {
         ZStack {
@@ -25,14 +28,22 @@ struct HomeView: View {
                     .foregroundStyle(.secondary)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal, 20)
-                if !show {
-                    CourseItem(namespace: namespace, show: $show)
-                        .onTapGesture {
-                            withAnimation(.openCard) {
-                                show.toggle()
-                            }
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 300), spacing: 20)], spacing: 20) {
+                    if !show {
+                        cards
+                    } else {
+                        ForEach(courses) { item in
+                            Rectangle()
+                                .fill(.white)
+                                .frame(height: 300)
+                                .cornerRadius(30)
+                                .shadow(color: Color("Shadow"), radius: 20, x: 0, y: 10)
+                                .opacity(0.3)
+                                .padding(.horizontal, 30)
                         }
+                    }
                 }
+                .padding(.horizontal, 20)
             }
             .coordinateSpace(name: "scroll")
             .safeAreaInset(edge: .top, content: {
@@ -42,14 +53,7 @@ struct HomeView: View {
                 NavigationBar(title: "Featured", hasScrolled: $hasScrolled)
             )
             if show {
-                CourseView(namespace: namespace, show: $show)
-                    .zIndex(1)
-                    .transition(
-                        .asymmetric(
-                            insertion: .opacity.animation(.easeInOut(duration: 0.1)),
-                            removal: .opacity.animation(.easeInOut(duration: 0.3).delay(0.2))
-                        )
-                    )
+                detail
             }
         }
         .statusBarHidden(!showStatusBar)
@@ -77,10 +81,12 @@ struct HomeView: View {
     }
     var featured: some View {
         TabView {
-            ForEach(courses) { item in
+            ForEach(featuredCourses) { item in
                 GeometryReader { proxy in
                     let minX = proxy.frame(in: .global).minX
                     FeaturedItem(course: item)
+                        .frame(maxWidth: 500)
+                        .frame(maxWidth: .infinity)
                         .padding(.vertical, 40)
                         .rotation3DEffect(
                             .degrees(minX / -10),
@@ -95,7 +101,7 @@ struct HomeView: View {
                                 .frame(height: 230)
                                 .offset(x: 32, y: -80)
                                 .offset(x: minX / 2)
-                    )
+                        )
                 }
             }
         }
@@ -103,8 +109,36 @@ struct HomeView: View {
         .frame(height: 430)
         .background(Image("Blob 1").offset(x: 250, y: -100))
     }
+    var cards: some View {
+        ForEach(courses) { course in
+            CourseItem(namespace: namespace, course: course, show: $show)
+                .onTapGesture {
+                    
+                    withAnimation(.openCard) {
+                        selectedId = course.id
+                        model.showDetail.toggle()
+                        show.toggle()
+                    }
+            }
+        }
+    }
+    var detail: some View {
+        ForEach(courses) { course in
+            if course.id == selectedId {
+                CourseView(namespace: namespace, course: course, show: $show)
+                    .zIndex(1)
+                    .transition(
+                        .asymmetric(
+                            insertion: .opacity.animation(.easeInOut(duration: 0.1)),
+                            removal: .opacity.animation(.easeInOut(duration: 0.3).delay(0.2))
+                        )
+                    )
+            }
+        }
+    }
 }
 
 #Preview {
     HomeView()
+        .environmentObject(Model())
 }
